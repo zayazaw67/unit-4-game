@@ -38,39 +38,57 @@ $(document).ready(function() {
     $("#red").on("click", function () {
         totalScore += redGem;
         console.log("Current" + totalScore)
+        $("#totalscore").text(totalScore)
         if (totalScore > target) {
-            console.log ("lost")
+            // console.log ("lost")
             losses++;
-            startGame()
+            $("#totalscore").text("0");
+            $(".losses").text(losses);
+            startGame();
+
         } else if (totalScore === target) {
-            console.log ("won")
+            // console.log ("won")
             wins++;
+            $("#totalscore").text("0");
+            $(".wins").text(wins);
             startGame();
         }
     })
     $("#green").on("click", function () {
         totalScore += greenGem;
         console.log("Current" + totalScore)
+        $("#totalscore").text(totalScore)
         if (totalScore > target) {
-            console.log ("lost")
+            // console.log ("lost")
             losses++;
-            startGame()
+            $("#totalscore").text("0");
+            $(".losses").text(losses);
+            startGame();
+
         } else if (totalScore === target) {
-            console.log ("won")
+            // console.log ("won")
             wins++;
+            $("#totalscore").text("0");
+            $(".wins").text(wins);
             startGame();
         }
     })
     $("#blue").on("click", function () {
         totalScore += blueGem;
         console.log("Current" + totalScore)
+        $("#totalscore").text(totalScore)
         if (totalScore > target) {
-            console.log ("lost")
+            // console.log ("lost")
             losses++;
-            startGame()
+            $("#totalscore").text("0");
+            $(".losses").text(losses);
+            startGame();
+
         } else if (totalScore === target) {
-            console.log ("won")
+            // console.log ("won")
             wins++;
+            $("#totalscore").text("0");
+            $(".wins").text(wins);
             startGame();
         }
     })
@@ -81,21 +99,18 @@ $(document).ready(function() {
         if (totalScore > target) {
             // console.log ("lost")
             losses++;
-            $(".losses").text(losses)
+            $("#totalscore").text("0");
+            $(".losses").text(losses);
             startGame();
-            totalScore = 0;
 
         } else if (totalScore === target) {
             // console.log ("won")
             wins++;
-            $(".wins").text(wins)
+            $("#totalscore").text("0");
+            $(".wins").text(wins);
             startGame();
-            totalScore = 0;
-
         }
     })
-        // $(".class")
-
     
     $("#totalscore").text(totalScore)
 
