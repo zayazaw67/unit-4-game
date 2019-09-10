@@ -10,12 +10,11 @@ $(document).ready(function() {
     var yellowGem; 
     var wins = 0;
     var losses = 0;
-
     var totalScore = 0;
     
     var startGame = function() {
         target = Math.floor(Math.random() * 101) + 19 ;
-        console.log("in the setScore function: " + target),
+        console.log(target),
         
         redGem = Math.floor(Math.random() * 12) + 1 ; 
         console.log("redGem: " + redGem);
@@ -30,6 +29,8 @@ $(document).ready(function() {
         console.log("yellowGem: " + yellowGem);
 
         totalScore = 0;
+        $("#objective").html("Your target score is " + target)
+
     }
 
     startGame()
@@ -60,7 +61,6 @@ $(document).ready(function() {
             startGame();
         }
     })
-
     $("#blue").on("click", function () {
         totalScore += blueGem;
         console.log("Current" + totalScore)
@@ -77,20 +77,30 @@ $(document).ready(function() {
     $("#yellow").on("click", function () {
         totalScore += yellowGem;
         console.log("Current" + totalScore)
+        $("#totalscore").text(totalScore)
         if (totalScore > target) {
-            console.log ("lost")
+            // console.log ("lost")
             losses++;
-            startGame()
-        } else if (totalScore === target) {
-            console.log ("won")
-            wins++;
+            $(".losses").text(losses)
             startGame();
+            totalScore = 0;
+
+        } else if (totalScore === target) {
+            // console.log ("won")
+            wins++;
+            $(".wins").text(wins)
+            startGame();
+            totalScore = 0;
+
         }
     })
         // $(".class")
 
     
-    $("#objective").text("Your target is " + target)
-    $("#scoreboard").text("Wins: " + wins)
-    $("#scoreboard").text("Losses: " + losses)
-})
+    $("#totalscore").text(totalScore)
+
+    // function display() {
+    //     $("#totalscore").text(totalScore)
+    //     }
+}
+)
