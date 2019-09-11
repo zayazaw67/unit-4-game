@@ -44,13 +44,14 @@ $(document).ready(function() {
             losses++;
             $("#totalscore").text("0");
             $(".losses").text(losses);
+            alert("You lost, click a gem to play again.")
             startGame();
-
         } else if (totalScore === target) {
             // console.log ("won")
             wins++;
             $("#totalscore").text("0");
             $(".wins").text(wins);
+            alert("You won! Click a gem to play again.")
             startGame();
         }
     })
@@ -63,6 +64,7 @@ $(document).ready(function() {
             losses++;
             $("#totalscore").text("0");
             $(".losses").text(losses);
+            alert("You lost, click a gem to play again.")
             startGame();
 
         } else if (totalScore === target) {
@@ -70,6 +72,7 @@ $(document).ready(function() {
             wins++;
             $("#totalscore").text("0");
             $(".wins").text(wins);
+            alert("You won! Click a gem to play again.")
             startGame();
         }
     })
@@ -82,6 +85,7 @@ $(document).ready(function() {
             losses++;
             $("#totalscore").text("0");
             $(".losses").text(losses);
+            alert("You lost, click a gem to play again.")
             startGame();
 
         } else if (totalScore === target) {
@@ -89,6 +93,7 @@ $(document).ready(function() {
             wins++;
             $("#totalscore").text("0");
             $(".wins").text(wins);
+            alert("You won! Click a gem to play again.")
             startGame();
         }
     })
@@ -101,6 +106,7 @@ $(document).ready(function() {
             losses++;
             $("#totalscore").text("0");
             $(".losses").text(losses);
+            alert("You lost, click a gem to play again.")
             startGame();
 
         } else if (totalScore === target) {
@@ -108,14 +114,12 @@ $(document).ready(function() {
             wins++;
             $("#totalscore").text("0");
             $(".wins").text(wins);
+            alert("You won! Click a gem to play again.")
             startGame();
         }
     })
     
     $("#totalscore").text(totalScore)
 
-    // function display() {
-    //     $("#totalscore").text(totalScore)
-    //     }
 }
 )
